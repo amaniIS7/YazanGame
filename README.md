@@ -104,7 +104,7 @@ Your Website must:
 - **Check out Tutorial and Documentation resources** at home to better understand what you’ll be getting into.
 - **Don’t be afraid to write code that you know you will have to remove later.** Create temporary elements (buttons, links, etc) that trigger events if real data is not available. For example, if you’re trying to figure out how to change some text when the website is over but you haven’t solved the win/lose website logic, you can create a button to simulate that until then.
 
-1.  Create a repository on github.com for your project
+1.  Create a repository on github enterprise for your project
 2.  Clone it to the projects folder on your computer
 3.  Add an HTML, CSS, and JS file to the folder
 4.  Connect the CSS and JS file to your HTML file and test that they all work
