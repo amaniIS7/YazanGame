@@ -83,7 +83,7 @@ Your Website must:
 
 - **A `README.md` file** with explanations of the technologies used, the approach taken, installation instructions, unsolved problems, any other useful information etc.
 
-- A Projects will be submitted by [Google Sheet](https://docs.google.com/spreadsheets/d/1l6fZJnFSV0AxC_WmbXP7xVLF5WLX2jwJet-nsMMTDyM/edit#gid=0)
+- **Projects will be submitted by [Google Sheet]**(https://docs.google.com/spreadsheets/d/1l6fZJnFSV0AxC_WmbXP7xVLF5WLX2jwJet-nsMMTDyM/edit#gid=0)
 
 - A **5 minute presentation** in which you answer the following questions:
   - What is the website about?
