@@ -35,7 +35,7 @@ By the time you submit this project, you will have covered new ground in, and re
 ## Big Goals
 
 - **Build a web application from scratch**, without a starter codebase
-- Use your programming skills to **work out the website logic for a website like Connect 4**
+- Use your programming skills to **work out the game logic for a website**
 - **Separate HTML, CSS, and JavaScript files** in your application
 - Build an application **to a specification that someone else gives you**
 - **Build a dynamic website that allows two players to compete** from the same computer
