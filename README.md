@@ -2,14 +2,17 @@
 
 # Project #1:  
 
-####  
+## Make a game!
 
-game
+### Overview
 
+Let's start out with something fun - **a game!**
 
-## Overview:
+You have two options:
 
-Let's start out with something fun 
+**Option A: make Tic Tac Toe (XO)**
+
+**Option B: make any game you want!**
 
 
 
