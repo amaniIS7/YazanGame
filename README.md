@@ -56,10 +56,6 @@ Your Website must:
 - Have well-formatted, and well-commented code
 
 
-### User Stories
-
-
-
 #### Potential Extra 
 
 - Use LocalStorage to persist data locally to allow websites to continue after page refresh or loss of internet connectivity
@@ -85,7 +81,7 @@ Your Website must:
 - A **link to your hosted working website** in the URL section of your Github repository
 - A **git repository hosted on Github**, with a link to your hosted website, and frequent commits dating back to the _very beginning of the project_ **(How to deploy your website on github: [Here](https://git.generalassemb.ly/JDI-KSA/github-website-deploy) )** 
 
-- **A `README.md` file** with explanations of the technologies used, the approach taken, installation instructions, unsolved problems, any other useful information etc.**(readme example [Here](https://github.com/akashnimare/foco/blob/master/readme.md) )** 
+- **A `README.md` file** with explanations of the technologies used, the approach taken, installation instructions, unsolved problems, any other useful information etc.
 - A **5 minute presentation** in which you answer the following questions:
   - What is the website about?
   - Is there any information you think might help us understand what you built?
