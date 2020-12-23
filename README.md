@@ -82,7 +82,7 @@ Your Website must:
 
 - A **working website, built by you**
 - A **link to your hosted working website** in the URL section of your Github repository
-- A **git repository hosted on Github**, with a link to your hosted website, and frequent commits dating back to the _very beginning of the project_ **(How to deploy your website on github: [Here](#) )** 
+- A **git repository hosted on Github**, with a link to your hosted website, and frequent commits dating back to the _very beginning of the project_ **(How to deploy your website on github: [Here](https://git.generalassemb.ly/JDI-KSA/github-website-deploy) )** 
 
 - **A `README.md` file** with explanations of the technologies used, the approach taken, installation instructions, unsolved problems, any other useful information etc.**(readme example [Here](https://github.com/akashnimare/foco/blob/master/readme.md) )** 
 - A **5 minute presentation** in which you answer the following questions:
