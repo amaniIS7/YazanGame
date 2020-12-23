@@ -79,7 +79,7 @@ Your Website must:
 - Describe how some of your favorite functions work
 
 ## Necessary Deliverables
-* Projects are due Thursday, 31/12/2020 at 8:30am!
+* Projects are due Wednessday, 30/12/2020 at 8:30am!
 
 - A **working website, built by you**
 - A **link to your hosted working website** in the URL section of your Github repository
