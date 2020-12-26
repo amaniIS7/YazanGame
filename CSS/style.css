@@ -1,11 +1,13 @@
 body {
   height: 800px;
   width: 1000px;
+  background-color: #333;
 
 
 }
 
 #container {
+  position: absolute;
   text-align: center;
   margin-bottom: 600px;
   margin-top:-120px;
@@ -13,39 +15,63 @@ body {
 
 }
 
-.zone {
-  width: 100px;
-  height: 100px;
-  border: solid black;
+
+#container img {
+  
   display: inline-block;
   transition: 0.5s all;
-
-
-
-}
-
-.zone img {
   width: 90px;
   height: 80px;
 
 }
 
+.control{
+  position: absolute;
+  text-align: center;
+}
 
 
+.control>button{
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+border-radius:20%;
 
-.backgraoudpixl{
+}
+
+
+canvas {
+  border:1px solid #d3d3d3;
+  background-image: url(  https://i.pinimg.com/originals/7d/09/5a/7d095ae81e099c20e7db776ea1a6e2ea.gif);
+  background-size:1400px 600px ;
+  background-repeat: no-repeat;
   height: 600px;
   width: 1400px;
 }
 
-.control{
 
+.button{
+
+  border: 2px solid #555555;
+  position: absolute;
+  padding: 16px 32px;
   text-align: center;
-  align-content: center;
-  margin-bottom: 700px;
-  margin-top:-500px;
-  margin-right: 100px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin: 4px 2px;
 
 
 }
-

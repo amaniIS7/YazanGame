@@ -1,42 +1,33 @@
-// var zone1 = document.getElementById('zone-1')
-// zone1.onmouseover = function(){zone1.style.backgroundColor = "green"}
-// zone1.onmouseleave = function(){zone1.style.backgroundColor = "white"};
 
-function moveup() {
-//     container.speedY -= 1; 
+ var  myGamePiece = document.getElementById("container");
 
+ function startGame() {  
+     myGameArea.start();}
 
-var elem = document.getElementById("container");   
-var pos = 0;
-var id = setInterval(frame, 5);
-function frame() {
-  if (pos == 350) {
-    clearInterval(id);
-  } else {
-    pos++; 
-    elem.style.top = pos + "px"; 
-    elem.style.left = pos + "px"; 
-  }
-
+var myGameArea = {
+  canvas : document.createElement("canvas"),
+    start : function() {
+        this.canvas.width = 880;
+        this.canvas.height = 370;
+this.context = this.canvas.getContext("2d");  
+         document.body.insertBefore(this.canvas, document.body.childNodes[1]);
+     }  
  }
 
-// function movedown() {
-//     container.speedY += 1; 
-// }
-
-// function moveleft() {
-//     container.speedX -= 1; 
-// }
-
-// function moveright() {
-//     container.speedX += 1; 
-// }
-
-// $(document).ready(function(){
-//     $("button").click(function(){
-//       $("container").slideUp(2000).slideDown(2000);
-//     });
-//   });
 
 
 
+
+
+ function moveup() {}
+ function movedown() {}
+
+ function moveleft() {}
+
+ function moveright() {}
+
+
+
+ function EXit(){
+   window.location.replace("file:///Users/mac/JDI/projects/Project-1/home.html")
+ }
