@@ -21,7 +21,7 @@ body {
   display: inline-block;
   transition: 0.5s all;
   width: 90px;
-  height: 80px;
+  height: 100px;
 
 }
 
@@ -49,6 +49,8 @@ border-radius:20%;
 }
 
 
+
+
 canvas {
   border:1px solid #d3d3d3;
   background-image: url(  https://i.pinimg.com/originals/7d/09/5a/7d095ae81e099c20e7db776ea1a6e2ea.gif);
@@ -56,7 +58,10 @@ canvas {
   background-repeat: no-repeat;
   height: 600px;
   width: 1400px;
+
 }
+
+
 
 
 .button{
@@ -74,4 +79,11 @@ canvas {
   margin: 4px 2px;
 
 
+}
+
+
+#hide{
+  position: absolute;
+margin: 60px;
+text-align: center;
 }

@@ -9,23 +9,40 @@
 </head>
 
 <body>
+  <!-- <div>
+  <img  src="https://fontmeme.com/permalink/201225/5651d7c53d239c6bc7972c67db4ecee0.png" alt="pixel-fonts" ></a>
+</div> -->
+<div id="container">
+  <img class="yazan" width="40" height="60"
+  src="/Users/mac/JDI/projects/Project-1/download.png">
+</div> 
 
- 
 
-  <div id="container">
-      <img src="Picture1.png" alt="">    
-  </div>
+
+<button onclick="hideme()" >hide</button>
+<button onclick="showme()" >showme</button>
+
+
+
+</div>
 
 
  <body onload="startGame()"> 
 
-
     <div class="control">
 
-        <button onclick="moveup()">UP</button><br><br>
+        <!-- <button onclick="moveup()">UP</button><br><br>
         <button onclick="moveleft()">LEFT</button>
         <button onclick="moveright()">RIGHT</button><br><br>
-        <button onclick="movedown()">DOWN</button>
+        <button onclick="movedown()">DOWN</button> -->
+
+        <div style="text-align:center;width:480px;">
+          <button onmousedown="moveup()" onmouseup="clearmove()" ontouchstart="moveup()">UP</button><br><br>
+          <button onmousedown="moveleft()" onmouseup="clearmove()" ontouchstart="moveleft()">LEFT</button>
+          <button onmousedown="moveright()" onmouseup="clearmove()" ontouchstart="moveright()">RIGHT</button><br><br>
+          <button onmousedown="movedown()" onmouseup="clearmove()" ontouchstart="movedown()">DOWN</button>
+    
+
       </div>
   
 
