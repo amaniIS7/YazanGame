@@ -9,20 +9,13 @@ body {
 #container {
   position: absolute;
   text-align: center;
-  margin-bottom: 600px;
-  margin-top:-120px;
-  margin-right: 500px;
 
 }
 
 
 #container img {
-  
-  display: inline-block;
-  transition: 0.5s all;
-  width: 90px;
-  height: 100px;
-
+    margin-top: 00px;
+   margin-left: 600px;
 }
 
 .control{
@@ -86,4 +79,9 @@ canvas {
   position: absolute;
 margin: 60px;
 text-align: center;
+}
+
+.grandma{
+margin-right: -2300px;
+
 }

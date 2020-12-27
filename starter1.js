@@ -1,9 +1,9 @@
 var myObstacles = [];
-
+var home ;
 
 function startGame() {
   myGamePiece = new component(40, 60, "/Users/mac/JDI/projects/Project-1/download.png", 10, 120, "image");
-  //myObstacle  = new component(10, 200, "green", 300, 120);    
+  home = new component(20, 40, "/Users/mac/JDI/projects/Project-1/grandma.png", 380, 220, "image");
 
   myGameArea.start();
 }
@@ -80,25 +80,33 @@ function updateGameArea() {
   for (i = 0; i < myObstacles.length; i += 1) {
       if (myGamePiece.crashWith(myObstacles[i])) {
         popupWindow1 = window.open("/Users/mac/JDI/projects/Project-1/gameover.jpg");
-
         myGameArea.stop();
           return;
       } 
+
   }
+
+  if (myGamePiece.crashWith(home)){
+    alert("you are win");
+            myGameArea.stop();}
   myGameArea.clear();
   myGameArea.frameNo += 1;
   if (myGameArea.frameNo == 1 || everyinterval(150)) {
       x = myGameArea.canvas.width;
       y = myGameArea.canvas.height - 200;
-      myObstacles.push(new component(20, Math.floor(Math.random() * 120), "/Users/mac/JDI/projects/Project-1/wall.png", x, y, "image"));
+      myObstacles.push(new component(20, Math.floor(Math.random() * 150), "/Users/mac/JDI/projects/Project-1/wall.png", x, y, "image"));
   }
   for (i = 0; i < myObstacles.length; i += 1) {
       myObstacles[i].x += -1;
       myObstacles[i].update();
   }
+  home.update();
   myGamePiece.newPos();    
   myGamePiece.update();
 }
+
+
+
 
 function everyinterval(n) {
   if ((myGameArea.frameNo / n) % 1 == 0) {return true;}
@@ -135,11 +143,11 @@ function clearmove() {
 
 
 function hideme() {
- document.getElementById('container').style.visibility='hidden';
+ document.getElementsByClassName('image2').style.visibility='hidden';
 
 }
 
 function showme() {
-  document.getElementById('container').style.visibility="visible";
+  document.getElgetElementsByClassNameementById('image2').style.visibility="visible";
  
  }

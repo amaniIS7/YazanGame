@@ -27,8 +27,14 @@ width: 1400px;
     margin:center ;
   }
 
-  .start{
 
-
-
+  .story {
+    position: absolute;
+    height: 80px ;
+    width: 110px;
+    top: 500px;
+    bottom:  350px;
+    right: 130px;
+    background-color: blanchedalmond;
+border-color: blanchedalmond;
   }

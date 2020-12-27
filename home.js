@@ -9,3 +9,9 @@ function hello() {
       window.location.replace("file:///Users/mac/JDI/projects/Project-1/index.html")
     } 
   }
+
+  function story() {
+    alert("Help Yazan to reach his grandmother's house");
+
+
+  }
