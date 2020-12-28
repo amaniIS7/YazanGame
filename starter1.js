@@ -1,12 +1,29 @@
-var myObstacles = [];
+var wall = [];
 var home ;
-
+var level = 0;
 function startGame() {
-  myGamePiece = new component(40, 60, "/Users/mac/JDI/projects/Project-1/download.png", 10, 120, "image");
+  yazan = new component(15, 60, "/Users/mac/JDI/projects/Project-1/download.png", 35, 210, "image");
   home = new component(20, 40, "/Users/mac/JDI/projects/Project-1/grandma.png", 380, 220, "image");
-
+  faile = new sound("https://audio.code.org/failure3.mp3");
+  win = new sound("https://audio.code.org/winpoint1.mp3");
   myGameArea.start();
 }
+
+function sound(src) {
+  this.sound = document.createElement("audio");
+  this.sound.src = src;
+  this.sound.setAttribute("preload", "auto");
+  this.sound.setAttribute("controls", "none");
+  this.sound.style.display = "none";
+  document.body.appendChild(this.sound);
+  this.play = function(){
+      this.sound.play();
+  }
+  this.stop = function(){
+      this.sound.pause();
+  }    
+}
+
 
 var myGameArea = {
   canvas : document.createElement("canvas"),
@@ -77,32 +94,41 @@ this.crashWith = function(otherobj) {
 
 function updateGameArea() {
   var x, y;
-  for (i = 0; i < myObstacles.length; i += 1) {
-      if (myGamePiece.crashWith(myObstacles[i])) {
-        popupWindow1 = window.open("/Users/mac/JDI/projects/Project-1/gameover.jpg");
+  for (i = 0; i < wall.length; i += 1) {
+      if (yazan.crashWith(wall[i])) {
+        faile.play();
         myGameArea.stop();
+        popupWindow1 = window.open("/Users/mac/JDI/projects/Project-1/gameover.jpg");
           return;
       } 
 
   }
 
-  if (myGamePiece.crashWith(home)){
-    alert("you are win");
-            myGameArea.stop();}
+  if (yazan.crashWith(home)){
+    win.play();
+    level++;
+    if (confirm("you are win in level:"+level)) {
+      startGame();
+    } else {
+      window.location.replace("file:///Users/mac/JDI/projects/Project-1/home.html")
+    }
+    myGameArea.stop();
+
+       }
   myGameArea.clear();
   myGameArea.frameNo += 1;
   if (myGameArea.frameNo == 1 || everyinterval(150)) {
       x = myGameArea.canvas.width;
       y = myGameArea.canvas.height - 200;
-      myObstacles.push(new component(20, Math.floor(Math.random() * 150), "/Users/mac/JDI/projects/Project-1/wall.png", x, y, "image"));
+      wall.push(new component(20, Math.floor(Math.random() * 150), "/Users/mac/JDI/projects/Project-1/wall.png", x, y, "image"));
   }
-  for (i = 0; i < myObstacles.length; i += 1) {
-      myObstacles[i].x += -1;
-      myObstacles[i].update();
+  for (i = 0; i < wall.length; i += 1) {
+    wall[i].x += -1;
+    wall[i].update();
   }
   home.update();
-  myGamePiece.newPos();    
-  myGamePiece.update();
+  yazan.newPos();    
+  yazan.update();
 }
 
 
@@ -116,24 +142,24 @@ function everyinterval(n) {
 
 
 function moveup() {
-  myGamePiece.speedY = -1; 
+  yazan.speedY = -1; 
 }
 
 function movedown() {
-  myGamePiece.speedY = 1; 
+  yazan.speedY = 1; 
 }
 
 function moveleft() {
-  myGamePiece.speedX = -1; 
+  yazan.speedX = -1; 
 }
 
 function moveright() {
-  myGamePiece.speedX = 1; 
+  yazan.speedX = 1; 
 }
 
 function clearmove() {
-  myGamePiece.speedX = 0; 
-  myGamePiece.speedY = 0; 
+  yazan.speedX = 0; 
+  yazan.speedY = 0; 
 }
  
 
