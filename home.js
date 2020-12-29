@@ -11,7 +11,7 @@ function hello() {
   }
 
   function story() {
-    alert("Help Yazan to reach his grandmother's house");
+    alert("Help the child Yazan to reach his grandmother's house and escape obstacles.If he gets to his grandmother's house, you get passed the first level and he takes you to the second level If you hit the obstacles, you will lose the game. Good luck with that");
 
 
   }

@@ -1,13 +1,16 @@
 var wall = [];
 var home ;
 var level = 0;
+var block = [];
+faile = new sound("https://audio.code.org/failure3.mp3");
+win = new sound("https://audio.code.org/winpoint1.mp3");
 function startGame() {
   yazan = new component(15, 60, "/Users/mac/JDI/projects/Project-1/download.png", 35, 210, "image");
   home = new component(20, 40, "/Users/mac/JDI/projects/Project-1/grandma.png", 380, 220, "image");
-  faile = new sound("https://audio.code.org/failure3.mp3");
-  win = new sound("https://audio.code.org/winpoint1.mp3");
+
   myGameArea.start();
 }
+
 
 function sound(src) {
   this.sound = document.createElement("audio");
@@ -96,13 +99,33 @@ function updateGameArea() {
   var x, y;
   for (i = 0; i < wall.length; i += 1) {
       if (yazan.crashWith(wall[i])) {
+      
         faile.play();
-        myGameArea.stop();
-        popupWindow1 = window.open("/Users/mac/JDI/projects/Project-1/gameover.jpg");
-          return;
-      } 
 
+      //  popupWindow1 = window.open("/Users/mac/JDI/projects/Project-1/gameover.jpg");
+       
+       myGameArea.stop();
+         return;
+      } 
+  //    myGameArea.start();
   }
+
+  for (i = 0; i < block.length; i += 1) {
+    if (yazan.crashWith(block[i])) {
+    
+    
+      faile.play();
+
+    //  popupWindow1 = window.open("/Users/mac/JDI/projects/Project-1/gameover.jpg");
+      
+    myGameArea.stop();
+
+    return;
+
+    } 
+//myGameArea.start();
+}
+
 
   if (yazan.crashWith(home)){
     win.play();
@@ -120,11 +143,21 @@ function updateGameArea() {
   if (myGameArea.frameNo == 1 || everyinterval(150)) {
       x = myGameArea.canvas.width;
       y = myGameArea.canvas.height - 200;
-      wall.push(new component(20, Math.floor(Math.random() * 150), "/Users/mac/JDI/projects/Project-1/wall.png", x, y, "image"));
+      if(level <= 1)
+      wall.push(new component(20, Math.floor(Math.random() * 180), "/Users/mac/JDI/projects/Project-1/wall.png", x, y, "image"));
+      if (level > 1){
+        wall.push(new component(20, Math.floor(Math.random() * 100), "/Users/mac/JDI/projects/Project-1/wall.png", x, y, "image"));
+        block.push(new component(20,30, "/Users/mac/JDI/projects/Project-1/ston.png", 380,  220, "image"));
+
+      }
   }
-  for (i = 0; i < wall.length; i += 1) {
-    wall[i].x += -1;
+  for (i = 0; i < wall.length; i += 2) {
+    wall[i].x += -0.8;
     wall[i].update();
+  }
+  for (i = 0; i < block.length; i += 2) {
+    block[i].x += -0.8;
+    block[i].update();
   }
   home.update();
   yazan.newPos();    

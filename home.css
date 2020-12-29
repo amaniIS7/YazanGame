@@ -26,13 +26,34 @@ width: 1400px;
     border: 1px green solid;
     margin:center ;
   }
+  .image4 {
+    position: absolute;
+    top: 30px;
+    bottom:  400px;
+    left: 530px;
+    border: 1px green solid;
+    margin:center ;
+    height: 200px;
+    width: 300px;
+    opacity: 0.5;
+
+  }
+
+  .image5 {
+    position: absolute;
+    top: 470px;
+    bottom:  500px;
+    left: 950px;
+    margin:center ;
+  }
+
 
 
   .story {
     position: absolute;
     height: 80px ;
     width: 110px;
-    top: 500px;
+    top: 520px;
     bottom:  350px;
     right: 130px;
     background-color: blanchedalmond;
