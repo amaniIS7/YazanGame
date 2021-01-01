@@ -9,6 +9,8 @@ faile = new sound("https://audio.code.org/failure3.mp3");
 win = new sound("https://audio.code.org/winpoint1.mp3");
 
 
+
+
 // start game method 
 function startGame() {
   // creat game paice
@@ -38,6 +40,10 @@ function sound(src) {
   }    
 }
 
+
+
+
+
 //creat canvas and put it in docmunt 
 var myGameArea = {
   canvas : document.createElement("canvas"),
@@ -48,7 +54,13 @@ var myGameArea = {
       document.body.insertBefore(this.canvas, document.body.childNodes[0]);
       this.frameNo = 0;
       this.interval = setInterval(updateGameArea, 20);
-      },
+      window.addEventListener('keydown', function (e) {
+        myGameArea.key = e.keyCode;
+    })
+    window.addEventListener('keyup', function (e) {
+        myGameArea.key = false;
+    })
+  }, 
   clear : function() {
       this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
   },
@@ -157,7 +169,12 @@ function updateGameArea() {
 
        }
 
+
+
+
   myGameArea.clear();
+    yazan.speedX = 0;
+    yazan.speedY = 0;
 
 
 
@@ -186,10 +203,18 @@ function updateGameArea() {
     block[i].x += -0.8;
     block[i].update();
   }
+
+
+
+  if (myGameArea.key && myGameArea.key == 37) {yazan.speedX = -1; }
+  if (myGameArea.key && myGameArea.key == 39) {yazan.speedX = 1; }
+  if (myGameArea.key && myGameArea.key == 38) {yazan.speedY = -1; }
+  if (myGameArea.key && myGameArea.key == 40) {yazan.speedY = 1; }
+
 //updats other components
-  home.update();
-  yazan.newPos();    
-  yazan.update();
+home.update();
+yazan.newPos();    
+yazan.update();
 }
 
 
@@ -201,24 +226,7 @@ function everyinterval(n) {
 }
 
 
-//control functions 
-function moveup() {
-  yazan.speedY = -1; 
-}
-function movedown() {
-  yazan.speedY = 1; 
-}
-function moveleft() {
-  yazan.speedX = -1; 
-}
-function moveright() {
-  yazan.speedX = 1; }
 
-function clearmove() {
-  yazan.speedX = 0; 
-  yazan.speedY = 0; 
-}
- 
 //to go to home 
  function EXit(){
    window.location.replace("file:///Users/mac/JDI/projects/Project-1/home.html")
