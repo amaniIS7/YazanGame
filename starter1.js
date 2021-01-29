@@ -14,7 +14,7 @@ win = new sound("https://audio.code.org/winpoint1.mp3");
 // start game method 
 function startGame() {
   // creat game paice
-  yazan = new component(15, 60, "/Users/mac/JDI/projects/Project-1/images/download.png", 35, 210, "image");
+  yazan = new component(20, 40, "/Users/mac/JDI/projects/Project-1/Picture1.png", 35, 220, "image");
   // creat win area 
   home = new component(20, 40, "/Users/mac/JDI/projects/Project-1/images/grandma.png", 380, 220, "image");
   // start the area 
@@ -95,6 +95,7 @@ function component(width, height, color, x, y, type) {
   }
   //updat yazan speed 
   this.newPos = function() {
+
       this.x += this.speedX;
       this.y += this.speedY;        
   }
@@ -111,11 +112,30 @@ this.crashWith = function(otherobj) {
   var othertop = otherobj.y;
   var otherbottom = otherobj.y + (otherobj.height);
   var crash = true;
-  if ((mybottom < othertop) || (mytop > otherbottom) || (myright < otherleft) || (myleft > otherright)) {
+  if ((mybottom < othertop-10) || (mytop > otherbottom-10) || (myright < otherleft+3) || (myleft > otherright+3)) {
       crash = false;//in case not crash 
   }
   return crash;//in case crash 
 }
+
+
+this.crashWith2 = function(otherobj) {
+  var myleft = this.x;
+  var myright = this.x + (this.width);
+  var mytop = this.y;
+  var mybottom = this.y + (this.height);
+  var otherleft = otherobj.x;
+  var otherright = otherobj.x + (otherobj.width);
+  var othertop = otherobj.y;
+  var otherbottom = otherobj.y + (otherobj.height);
+  var crash = true;
+
+  if ((mybottom < othertop+20) || (mytop > otherbottom+20) || (myright < otherleft+3) || (myleft > otherright+3)) {
+    crash = false;//in case not crash 
+  }
+  return crash;//in case crash 
+}
+
 }
 
 //to updat it and check in case lose or win  
@@ -135,7 +155,7 @@ function updateGameArea() {
   }
 
   for (i = 0; i < block.length; i += 1) {
-    if (yazan.crashWith(block[i])) {
+    if (yazan.crashWith2(block[i])) {
     
       //sound play 
       faile.play();
@@ -206,7 +226,8 @@ function updateGameArea() {
 
 
 
-  if (myGameArea.key && myGameArea.key == 37) {yazan.speedX = -1; }
+  if (myGameArea.key && myGameArea.key == 37) {yazan.speedX = -1;
+  }
   if (myGameArea.key && myGameArea.key == 39) {yazan.speedX = 1; }
   if (myGameArea.key && myGameArea.key == 38) {yazan.speedY = -1; }
   if (myGameArea.key && myGameArea.key == 40) {yazan.speedY = 1; }
