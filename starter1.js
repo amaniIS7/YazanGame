@@ -14,9 +14,9 @@ win = new sound("https://audio.code.org/winpoint1.mp3");
 // start game method 
 function startGame() {
   // creat game paice
-  yazan = new component(20, 40, "/Users/mac/JDI/projects/Project-1/Picture1.png", 35, 220, "image");
+  yazan = new component(20, 40, "https://i.imgur.com/i7gnEf7.png", 35, 220, "image");
   // creat win area 
-  home = new component(20, 40, "/Users/mac/JDI/projects/Project-1/images/grandma.png", 380, 220, "image");
+  home = new component(20, 40, "https://i.imgur.com/0p3v838.png", 380, 220, "image");
   // start the area 
   myGameArea.start();
 }
@@ -205,11 +205,11 @@ function updateGameArea() {
       //check the level if add more Obstacles to be harder 
       if(level <= 1)
       //add wall with randomly higth 
-      wall.push(new component(20, Math.floor(Math.random() * 180), "/Users/mac/JDI/projects/Project-1/images/wall.png", x, y, "image"));
+      wall.push(new component(20, Math.floor(Math.random() * 180), "https://i.imgur.com/AHuKWRI.png", x, y, "image"));
       if (level > 1){
               //add wall with randomly higth and stone 
-        wall.push(new component(20, Math.floor(Math.random() * 100), "/Users/mac/JDI/projects/Project-1/images/wall.png", x, y, "image"));
-        block.push(new component(20,30, "/Users/mac/JDI/projects/Project-1/images/ston.png", 380,  220, "image"));
+        wall.push(new component(20, Math.floor(Math.random() * 100), "https://i.imgur.com/AHuKWRI.png", x, y, "image"));
+        block.push(new component(20,30, "https://i.imgur.com/jCQpRkp.png", 380,  220, "image"));
 
       }
   }
