@@ -144,7 +144,7 @@ function updateGameArea() {
   for (i = 0; i < wall.length; i += 1) {
       if (yazan.crashWith(wall[i])) {
       //sound play 
-        faile.play();
+        // faile.play();
 
       //  popupWindow1 = window.open("/Users/mac/JDI/projects/Project-1/gameover.jpg");
        //stop the game now 
@@ -158,7 +158,7 @@ function updateGameArea() {
     if (yazan.crashWith2(block[i])) {
     
       //sound play 
-      faile.play();
+      // faile.play();
 
     //  popupWindow1 = window.open("/Users/mac/JDI/projects/Project-1/gameover.jpg");
          //stop the game now 
